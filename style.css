@@ -1,3 +1,10 @@
+.gif-size{
+  width: 100%;              /* 横幅はカードにフィット */
+  aspect-ratio: 1 / 1;     /* ここで 16:9 を宣言 */
+  object-fit: cover;        /* 足りない所はトリム */
+  border-radius: 8px;
+}
+
 :root {
   --primary: #333333;        /* メイン：ダークグレー */
   --primary-dark: #1f1f1f;   /* ホバー・影：ほぼ黒 */
