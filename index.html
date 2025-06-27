@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <base href="/practice/">
+  <title>宮路 | ポートフォリオ</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <!-- ヒーローセクション -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>宮路<span class="dot">.</span></h1>
+      <p class="tagline">技術で日常をもっと便利に — システムエンジニア志望</p>
+      <a href="#projects" class="btn-cta">作品を見る</a>
+    </div>
+  </header>
+
+  <!-- ナビゲーション -->
+  <nav>
+    <ul>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#skills">技術</a></li>
+      <li><a href="#projects">成果物</a></li>
+      <li><a href="#learning">学習中</a></li>
+      <li><a href="#goals">目標</a></li>
+      <li><a href="#contact">連絡先</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- プロフィール -->
+    <section id="profile">
+      <h2>プロフィール</h2>
+      <p>ここに自己紹介や略歴を記載。高度情報処理技術者試験に合格し、現在はネットワークスペシャリスト試験の勉強中。</p>
+    </section>
+
+    <!-- 技術スタック -->
+    <section id="skills" class="bg-light">
+      <h2>技術スタック</h2>
+      <ul class="pill-list">
+        <li>Java / Spring Boot</li>
+        <li>SQL / PostgreSQL</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>Git / GitHub</li>
+        <li>Linux</li>
+      </ul>
+    </section>
+
+    <!-- 成果物 -->
+    <section id="projects">
+      <h2>成果物</h2>
+      <div class="card-grid">
+
+        <div class="card">
+		  <h3>ガチャ確率シミュレータ</h3>
+		  <p class="card-desc">包除原理で高速化した確率計算ツール。</p>
+		
+		  <!-- ── メイン GIF ── -->
+		  <img src="images/gacha.gif" class="media-main" alt="ガチャ確率シミュレーションの動作デモ">
+		
+		  <!-- ── ギャラリー ── -->
+		  <div class="media-gallery">
+		    <figure>
+		      <img src="images/gacha1.jpeg" class="gallery-img" data-index="0" 
+		           alt="①-1 入力フォームでパラメータを設定する画面">
+		      <figcaption>① パラメータ入力</figcaption>
+		    </figure>
+		    <figure>
+		      <img src="images/gacha2.jpeg" class="gallery-img" data-index="1"
+		           alt="①-2 入力フォームでパラメータを設定する画面">
+		      <figcaption>② パラメータ入力</figcaption>
+		    </figure>
+		    <figure>
+		      <img src="images/gacha3.jpeg" class="gallery-img" data-index="2"
+		           alt="② 当たり確率とグラフが表示される画面">
+		      <figcaption>③ 結果出力</figcaption>
+		    </figure>
+		  </div>
+		<!-- 拡大表示用のライトボックス -->
+			<div class="lightbox" id="lightbox">
+			  <span class="lightbox-close" id="lightbox-close">&times;</span>
+			  
+			  <img class="lightbox-image" id="lightbox-image" src="" alt="">
+			  <p class="lightbox-caption" id="lightbox-caption"></p>
+			  <div class="lightbox-nav">
+			    <span class="lightbox-prev" id="lightbox-prev">&#10094;</span>
+			    <span class="lightbox-next" id="lightbox-next">&#10095;</span>
+			  </div>
+			</div>
+		  <div class="card-links">
+		    <a href="https://github.com/YourName/gacha-simulator" target="_blank">GitHub</a>
+		  </div>
+		</div>
+
+
+        <div class="card">
+          <h3>数字の並びジェネレータ</h3>
+          <p class="card-desc">組合せ最適化アルゴリズムを用いたパズル系 Web アプリ。</p>
+          <!-- ── メイン GIF ── -->
+		  <img src="images/number.gif" class="media-main" alt="ガチャ確率シミュレーションの動作デモ">
+		
+		  <!-- ── ギャラリー ── -->
+		  <div class="media-gallery">
+		    <figure>
+		      <img src="images/number1.jpeg" class="gallery-img" data-index="0" 
+		           alt="① 入力フォームでパラメータを設定する画面">
+		      <figcaption>① パラメータ入力</figcaption>
+		    </figure>
+		    <figure>
+		      <img src="images/number2.jpeg" class="gallery-img" data-index="1"
+		           alt="② 計算式の構築結果が表示される画面">
+		      <figcaption>② 結果出力</figcaption>
+		    </figure>
+		    
+		  </div>
+		<!-- 拡大表示用のライトボックス -->
+			<div class="lightbox" id="lightbox">
+			  <span class="lightbox-close" id="lightbox-close">&times;</span>
+			  
+			  <img class="lightbox-image" id="lightbox-image" src="" alt="">
+			  <p class="lightbox-caption" id="lightbox-caption"></p>
+			  <div class="lightbox-nav">
+			    <span class="lightbox-prev" id="lightbox-prev">&#10094;</span>
+			    <span class="lightbox-next" id="lightbox-next">&#10095;</span>
+			  </div>
+			</div>
+		  <div class="card-links">
+		    <a href="https://github.com/YourName/gacha-simulator" target="_blank">GitHub</a>
+		  </div>
+		</div>
+
+      </div>
+    </section>
+
+    <!-- 学習中 -->
+    <section id="learning" class="bg-light">
+      <h2>現在学んでいること</h2>
+      <p>React / TypeScript、ネットワークスペシャリスト試験対策</p>
+    </section>
+
+    <!-- 目標 -->
+    <section id="goals">
+      <h2>今後の目標</h2>
+      <p>生活を便利にするフルスタック Web サービスのリリース</p>
+    </section>
+
+    <!-- 連絡先 -->
+    <section id="contact" class="bg-light">
+      <h2>連絡先</h2>
+      <ul>
+        <li>Email: your.name@example.com</li>
+        <li>GitHub: <a href="https://github.com/YourName" target="_blank">@YourName</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 宮路
+  </footer>
+   <!-- 🔽 外部ファイルとして読み込む -->
+  <script src="script.js"></script>
+</body>
+</html>
+
