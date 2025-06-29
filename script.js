@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let images = [];
   let current = 0;
 
-  // ギャラリー画像ごとにクリックイベントを追加
   document.querySelectorAll('.gallery-img').forEach((img) => {
     img.addEventListener('click', () => {
       const gallery = img.closest('.media-gallery');
