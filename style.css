@@ -1,4 +1,3 @@
-/* ライトボックスの基本レイアウト */
 .lightbox {
   display: none;
   position: fixed;
@@ -11,12 +10,11 @@
 }
 
 .lightbox-image {
-  /*aspect-ratio: 1 / 1;*/
-  max-width: 90vw;  /* ビューポートの幅の90%を上限 */
-  max-height: 80vh; /* 高さも制限してスクロール防止 */
+  max-width: 90vw;
+  max-height: 80vh;
   width: auto;
   height: auto;
-  object-fit: contain;  /* 元のアスペクト比を保つ */
+  object-fit: contain;
   border-radius: var(--radius);
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
@@ -37,7 +35,6 @@
   max-width: 80%;
 }
 
-/* 左右の矢印 */
 .lightbox-nav span {
   position: absolute;
   top: 50%;
@@ -52,7 +49,6 @@
 .lightbox-prev { left: 1rem; }
 .lightbox-next { right: 1rem; }
 
-/* メイン GIF */
 .media-main {
   width: 100%;
   aspect-ratio: 1;
@@ -62,17 +58,15 @@
   margin-bottom: 1rem;
 }
 
-/* ギャラリー横並び（スマホは横スクロール） */
 .media-gallery {
   display: flex;
   gap: 0.75rem;
-  overflow-x: auto;          /* スマホでスワイプ */
-  padding-bottom: 0.5rem;    /* スクロールバーとの余白 */
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
 
-/* 各サムネイル */
 .media-gallery figure {
-  flex: 0 0 150px;           /* 固定幅で横に並べる */
+  flex: 0 0 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,10 +75,9 @@
 
 .media-gallery img {
   width: 100%;
-  /*aspect-ratio: 1 / 1;*/
   object-fit: cover;
   border-radius: var(--radius);
-  cursor: pointer;          /* “拡大できそう”と伝える */
+  cursor: pointer;
   transition: transform 0.2s;
 }
 .media-gallery img:hover { transform: scale(1.03); }
@@ -95,31 +88,21 @@
   color: #555;
 }
 
-/* 600px 以下はサムネイルのみスワイプで十分 */
-@media (max-width: 600px) {
-  .media-gallery figure { flex: 0 0 70%; }
-}
 
-/*.gif-size{
-  width: 100%;              /* 横幅はカードにフィット */
-/*  aspect-ratio: 1 / 1;     /* ここで 16:9 を宣言 */
-/*  object-fit: cover;        /* 足りない所はトリム */
-/*  border-radius: 8px;
-/*}*/
+
+
 
 :root {
-  --primary: #333333;        /* メイン：ダークグレー */
-  --primary-dark: #1f1f1f;   /* ホバー・影：ほぼ黒 */
-  --light: #f5f5f5;          /* 薄いライトグレー背景 */
-  --text: #212121;           /* 標準文字色 */
-  --radius: 8px;             /* 角丸 */
+  --primary: #333333;
+  --primary-dark: #1f1f1f;
+  --light: #f5f5f5;
+  --text: #212121;
+  --radius: 8px;
   
 }
 
-/* ======= リセット ======= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ======= ベース ======= */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -130,20 +113,16 @@ body {
 a { color: var(--primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 見出し */
 h1, h2, h3 { font-weight: 600; margin-bottom: 0.5rem; }
 
-/* セクション */
 section { padding: 3rem 1.5rem; max-width: 960px; margin: auto; }
 .bg-light { background: var(--light); }
 
-/* ======= ナビバー ======= */
 nav { background: var(--primary); }
 nav ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; }
 nav a { display: block; padding: 0.75rem 1rem; color: #ffffff; font-size: 0.9rem; }
 nav a:hover { background: var(--primary-dark); }
 
-/* ======= ヒーロー ======= */
 .hero {
   background: linear-gradient(135deg, #999999 0%, #2a2a2a 100%);
   color: #ffffff;
@@ -151,7 +130,6 @@ nav a:hover { background: var(--primary-dark); }
   text-align: center;
 }
 .hero h1 { font-size: 2.75rem; letter-spacing: -1px; }
-.hero .dot { color: #ffffff; }                /* アクセントを控えめに白 */
 .tagline { margin: 0.5rem 0 1.5rem; font-size: 1.1rem; color: #e0e0e0; }
 .btn-cta {
   display: inline-block;
@@ -164,7 +142,6 @@ nav a:hover { background: var(--primary-dark); }
 }
 .btn-cta:hover { background: #ebebeb; }
 
-/* ======= 技術バッジ ======= */
 .pill-list {
   display: flex;
   flex-wrap: wrap;
@@ -180,7 +157,6 @@ nav a:hover { background: var(--primary-dark); }
   font-size: 0.85rem;
 }
 
-/* ======= プロジェクトカード ======= */
 .card-grid {
   display: grid;
   gap: 1.5rem;
@@ -197,7 +173,6 @@ nav a:hover { background: var(--primary-dark); }
 .card-desc { margin: 0.5rem 0 1rem; font-size: 0.9rem; color: #555; }
 .card-links a { margin-right: 1rem; font-size: 0.85rem; }
 
-/* ======= フッター ======= */
 footer {
   background: #1b1b1b;
   color: #aaaaaa;
@@ -206,7 +181,6 @@ footer {
   font-size: 0.8rem;
 }
 
-/* ======= スマホ調整 ======= */
 @media (max-width: 600px) {
   .hero h1 { font-size: 2.1rem; }
   nav a { padding: 0.6rem 0.8rem; }
